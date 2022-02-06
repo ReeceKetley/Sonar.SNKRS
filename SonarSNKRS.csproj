@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5003D38C-DC1B-4BB1-8787-9C8060816B77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SonarSNKRS</RootNamespace>
+    <AssemblyName>SonarSNKRS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SonarSNKRS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Untitled.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>..\packages\EO.WebBrowser.3.0.112\lib\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Faker">
+      <HintPath>H:\autoTube\NikeSonar\bin\iPhone\Ad-Hoc\Faker.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniHttpd, Version=1.2.0.3504, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MiniHttpd.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Nat">
+      <HintPath>..\libs\Mono.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\libs\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSystem.cs" />
+    <Compile Include="Classes\APILogin\ApiLogin.cs" />
+    <Compile Include="Classes\APILogin\APIUser.cs" />
+    <Compile Include="Classes\APILogin\LoginResponseCodes.cs" />
+    <Compile Include="Classes\Controls\StackPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\General Classes\EmailSender.cs" />
+    <Compile Include="Classes\General Classes\Functions.cs" />
+    <Compile Include="Classes\General Classes\HTTP.cs" />
+    <Compile Include="Classes\General Classes\SMS.cs" />
+    <Compile Include="Classes\General Classes\SMSProviders.cs" />
+    <Compile Include="Classes\General Classes\Win32.cs" />
+    <Compile Include="Classes\Remote Backend\PacketHandler.cs" />
+    <Compile Include="Classes\Remote Backend\RealtimeAPIServer.cs" />
+    <Compile Include="Classes\RemoteRestock Classes\RemoteServer.cs" />
+    <Compile Include="Classes\SNKRS Classes\AddToCartCode.cs" />
+    <Compile Include="Classes\SNKRS Classes\BuyProductResult.cs" />
+    <Compile Include="Classes\SNKRS Classes\Enums.cs" />
+    <Compile Include="Classes\SNKRS Classes\GeneralPostData.cs" />
+    <Compile Include="Classes\SNKRS Classes\NetResult.cs" />
+    <Compile Include="Classes\SNKRS Classes\NikeAccount.cs" />
+    <Compile Include="Classes\SNKRS Classes\NikeProduct.cs" />
+    <Compile Include="Classes\SNKRS Classes\NikeRegions.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRS.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRSActions.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRSResponseLog.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRSTask.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRSTaskConfig.cs" />
+    <Compile Include="Classes\SNKRS Classes\SNKRSUrls.cs" />
+    <Compile Include="Classes\SNKRS Classes\SuccessMoniter.cs" />
+    <Compile Include="Classes\SNKRS Classes\TaskContainer.cs" />
+    <Compile Include="Classes\SNKRS Classes\WaitInLineReply.cs" />
+    <Compile Include="Classes\StyleCodeSearcher.cs" />
+    <Compile Include="Classes\User Classes\Crypto.cs" />
+    <Compile Include="Classes\User Classes\LoginFunctions.cs" />
+    <Compile Include="Classes\User Classes\VaultUser.cs" />
+    <Compile Include="Classes\WebServer\ApiClass.cs" />
+    <Compile Include="Classes\WebServer\CommandPage.cs" />
+    <Compile Include="Classes\WebServer\LoginPage.cs" />
+    <Compile Include="Classes\WebServer\SuccessFile.cs" />
+    <Compile Include="Classes\WebServer\TasksFile.cs" />
+    <Compile Include="Classes\WebServer\VirtualFile.cs" />
+    <Compile Include="Classes\WebServer\WebServer.cs" />
+    <Compile Include="Forms\CheckoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckoutForm.Designer.cs">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTask.Designer.cs">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NikeAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NikeAccountsForm.Designer.cs">
+      <DependentUpon>NikeAccountsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductInfo.Designer.cs">
+      <DependentUpon>ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetTimeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetTimeFrm.Designer.cs">
+      <DependentUpon>SetTimeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageCache.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Setings\GlobalSettings.cs" />
+    <EmbeddedResource Include="Forms\CheckoutForm.resx">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTask.resx">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NikeAccountsForm.resx">
+      <DependentUpon>NikeAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductInfo.resx">
+      <DependentUpon>ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetTimeFrm.resx">
+      <DependentUpon>SetTimeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoUpdater.NET.dll" />
+    <Content Include="AutoUpdater.NET.pdb" />
+    <Content Include="AutoUpdater.NET.XML" />
+    <None Include="bin\Debug\sounds\dominating.mp3" />
+    <None Include="bin\Debug\sounds\doublekill.mp3" />
+    <None Include="bin\Debug\sounds\firstblood.mp3" />
+    <None Include="bin\Debug\sounds\godlike.mp3" />
+    <None Include="bin\Debug\sounds\hattrick.wav" />
+    <None Include="bin\Debug\sounds\headshot.mp3" />
+    <None Include="bin\Debug\sounds\holyshit.mp3" />
+    <None Include="bin\Debug\sounds\humiliation.mp3" />
+    <None Include="bin\Debug\sounds\killingspree.mp3" />
+    <None Include="bin\Debug\sounds\ludicrouskill.mp3" />
+    <None Include="bin\Debug\sounds\megakill.mp3" />
+    <None Include="bin\Debug\sounds\multikill.mp3" />
+    <None Include="bin\Debug\sounds\rampage.mp3" />
+    <None Include="bin\Debug\sounds\triplekill.mp3" />
+    <None Include="bin\Debug\sounds\ultrakill.mp3" />
+    <None Include="bin\Debug\sounds\unstoppable.mp3" />
+    <None Include="bin\Debug\sounds\wickedsick.mp3" />
+    <Content Include="de-DE\Faker.resources.dll" />
+    <Content Include="MetroFramework.Design.dll" />
+    <Content Include="MetroFramework.dll" />
+    <Content Include="MetroFramework.Fonts.dll" />
+    <Content Include="MiniHttpd.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="pt-BR\Faker.resources.dll" />
+    <Content Include="Resources\base-icon.png" />
+    <None Include="Resources\dominating.wav" />
+    <None Include="Resources\doublekill.wav" />
+    <None Include="Resources\firstblood.wav" />
+    <None Include="Resources\godlike.wav" />
+    <None Include="Resources\hattrick.wav" />
+    <None Include="Resources\headshot.wav" />
+    <None Include="Resources\holyshit.wav" />
+    <None Include="Resources\humiliation.wav" />
+    <None Include="Resources\killingspree.wav" />
+    <None Include="Resources\ludicrouskill.wav" />
+    <None Include="Resources\megakill.wav" />
+    <None Include="Resources\multikill.wav" />
+    <None Include="Resources\rampage.wav" />
+    <None Include="Resources\triplekill.wav" />
+    <None Include="Resources\ultrakill.wav" />
+    <None Include="Resources\unstoppable.wav" />
+    <None Include="Resources\wickedsick.wav" />
+    <None Include="Resources\bruh.wav" />
+    <Content Include="Untitled.ico" />
+    <None Include="Resources\Mail_iOS.svg.png" />
+    <Content Include="Resources\nikelogo.jpg" />
+    <Content Include="Resources\nike_shoes-128.png" />
+    <None Include="Resources\SMS-icon.png" />
+    <Content Include="Resources\vault_door2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sd\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
